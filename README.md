@@ -17,6 +17,8 @@ Pastas:
     ∟ order_details.csv
   ∟ postgres
 ∟ docker
+  ∟ data
+    ∟ northwind.sql
   ∟ docker-compose.yaml
 ∟ extract
   ∟ final_query.sql
