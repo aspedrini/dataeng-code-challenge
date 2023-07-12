@@ -32,7 +32,8 @@ A pasta "postgres" dentro de "data" é uma pasta vazia. Caso ela não seja carre
 
 2 - No seu software de IDE, abra a pasta clonada de forma a ter essa visualização:
 
-![image](https://github.com/aspedrini/indicium-codechallenge/assets/103280317/e19d6f35-a7bd-4063-9d57-69b380b911a8)
+![image](https://github.com/aspedrini/dataeng-code-challenge/assets/103280317/bdb65d29-a4a2-4ff0-9d9c-4325e47e75b0)
+
 
 3 - No terminal do IDE, ative o virtual environment através do comando:
 ```
@@ -55,20 +56,22 @@ Com o Virtual Environment ativado, requeriments.txt instalado e o docker-compose
 # Execução
 Os dois scripts de sufixo "_extract.py" devem rodar, independente da ordem, antes da task final "upload_mysql.py".
 
-![image](https://github.com/aspedrini/indicium-codechallenge/assets/103280317/9c8bba01-e6dc-4fea-b8cf-67704863876b)
+![image](https://github.com/aspedrini/dataeng-code-challenge/assets/103280317/5006cd23-2f87-41b7-af2c-d4f587202415)
 
 O script "sql_extract.py" realiza as extrações das tabelas do PostgreSQL fornecido no arquivo original do docker-compose.yml pela Indicium, e já vem populado com os dados do banco Northwind com exceção da order_details.
 O "csv_extract.py" extrai os dados do csv "order_details.csv" localizado dentro de "data", sendo seus dados estáticos.
 Todos os scripts pedem um input do usuário para a data alvo da extraçao. É possível escolher a opção "1" para o dia de hoje e "2" para digitar outra data (YYYY-MM-DD). Antes do upload, o último script faz uma verificação no nome das pastas dentro de data/csv e data/postgres para checar se a data escolhida existe em ambas, e apenas em caso positivo é realizado o upload.
 
 Diagrama final:
-![image](https://github.com/aspedrini/indicium-codechallenge/assets/103280317/7160caae-8f57-492d-804a-4c64317c1e46)
+![image](https://github.com/aspedrini/dataeng-code-challenge/assets/103280317/ad9371ae-143e-4031-9837-31571acf546c)
+
 
 # Acessando o MySQL
 Através da ferramenta para acessar bancos de dados, adicione o banco do MySQL que foi inicializado através do Docker. Suas informações de login estão no arquio docker-compose.yml.
 Na pasta "extract" está disponibilizada um script em .sql para realizar a query final:
 
-![image](https://github.com/aspedrini/indicium-codechallenge/assets/103280317/f3337044-c84e-493a-af85-0d1dbbd8201f)
+![image](https://github.com/aspedrini/dataeng-code-challenge/assets/103280317/abcd5e54-9f48-4547-b6dd-b14f36d81b0b)
+
 
 # Considerações finais
 Para realização do projeto, aproveitei para subir no docker-compose.yml o banco do MySQL, por alguns motivos: o primeiro é relativo à complexidade da tarefa, e creio que não seria de bom grado utilizar o mesmo banco de dados disponibilizado para o consumo na primeira etapa; o segundo motivo é por estar aprendendo Docker junto com Airflow, para me habituar melhor com a estrutura de seu arquivo.
