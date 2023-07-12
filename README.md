@@ -12,7 +12,6 @@ Para dar início ao processo, é necessário ter o Docker e Python instalados. O
 Dentro desta pasta clonada devem estar os seguintes itens:
 ```
 Pastas:
-∟ .venv
 ∟ data
   ∟ csv
     ∟ order_details.csv
@@ -30,22 +29,31 @@ Arquivos:
 ```
 A pasta "postgres" dentro de "data" é uma pasta vazia. Caso ela não seja carregada, crie-a por favor.
 
-2 - No seu software de IDE, abra a pasta clonada de forma a ter essa visualização:
-
-![image](https://github.com/aspedrini/dataeng-code-challenge/assets/103280317/bdb65d29-a4a2-4ff0-9d9c-4325e47e75b0)
-
-
-3 - No terminal do IDE, ative o virtual environment através do comando:
+2 - Crie a pasta do Virtual Environment (venv) digitando no terminal da IDE:
+```
+python -m venv .venv
+```
+e ative-o:
 ```
 .venv/scripts/activate
 ```
 
-4 - Instale as bibliotecas de requisitos digitando em seu terminal:
+3 - No seu software de IDE, abra a pasta clonada de forma a ter essa visualização:
+
+![image](https://github.com/aspedrini/dataeng-code-challenge/assets/103280317/bdb65d29-a4a2-4ff0-9d9c-4325e47e75b0)
+
+
+4 - No terminal do IDE, ative o virtual environment através do comando:
+```
+.venv/scripts/activate
+```
+
+5 - Instale as bibliotecas de requisitos digitando em seu terminal:
 ```
 pip install -r requirements.txt
 ```
 
-5 - Execute o docker-compose.yaml:
+6 - Execute o docker-compose.yaml:
 ```
 cd docker
 docker-compose up -d
